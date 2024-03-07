@@ -344,7 +344,7 @@ data = pd.read_sql_query("SELECT * from m1;", con)
 
 </details>
 
-Possible queries that can be added to the above SQL script include, but are not limited to, 'joining tables,' 'Order by,' and 'making conditions using Where,' etc.
+Possible queries that can be added to the above SQL script to short the results include but are not limited to sorting the results by "ORDER BY Clause", combining rows from two or more tables using "JOIN Operation", search for a specific pattern in columns using "Where", among others.
 
 Finally, place the directory containing files in the 'C:/' directory on Windows. Navigate to the main directory and run the following command:
 
