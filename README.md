@@ -343,3 +343,43 @@ Note: if you are using Linux, you should place the directory containing files in
 ```
 os.remove("/home/csv/beta.db")
 ```
+
+The output should be similar to the one below:
+
+<details>
+    <summary>model output</summary>
+    
+```
+2024-03-07 14:00:55,050 [VDK] [WARNI] vdk.internal.builtin_plugins.t     template_impl.py :39   add_template     - Template with name scd1 has been registered with directory C:\Users\Ehsan\AppData\Local\Programs\Python\Python311\Lib\site-packages\vdk\plugin\impala\templates\load\dimension\scd1.We will overwrite it with new directory C:\Users\Ehsan\AppData\Local\Programs\Python\Python311\Lib\site-packages\vdk\plugin\trino\templates\load\dimension\scd1 now.
+2024-03-07 14:00:55,050 [VDK] [WARNI] vdk.internal.builtin_plugins.t     template_impl.py :39   add_template     - Template with name scd2 has been registered with directory C:\Users\Ehsan\AppData\Local\Programs\Python\Python311\Lib\site-packages\vdk\plugin\impala\templates\load\versioned.We will overwrite it with new directory C:\Users\Ehsan\AppData\Local\Programs\Python\Python311\Lib\site-packages\vdk\plugin\trino\templates\load\dimension\scd2 now.
+2024-03-07 14:00:55,050 [VDK] [WARNI] vdk.internal.builtin_plugins.t     template_impl.py :39   add_template     - Template with name periodic_snapshot has been registered with directory C:\Users\Ehsan\AppData\Local\Programs\Python\Python311\Lib\site-packages\vdk\plugin\impala\templates\load\fact\snapshot.We will overwrite it with new directory C:\Users\Ehsan\AppData\Local\Programs\Python\Python311\Lib\site-packages\vdk\plugin\trino\templates\load\fact\periodic_snapshot now.
+2024-03-07 14:00:55,050 [VDK] [INFO ] vdk.plugin.control_cli_plugin. properties_plugin.py :22   initialize_job   - Initialize Control Service based Properties client implementation.
+2024-03-07 14:00:55,050 [VDK] [INFO ] vdk.plugin.control_cli_plugin.    execution_skip.py :105  _skip_job_if_nec - Checking if job should be skipped:
+2024-03-07 14:00:55,050 [VDK] [INFO ] vdk.plugin.control_cli_plugin.    execution_skip.py :106  _skip_job_if_nec - Job : NSA, Team : None, Log config: LOCAL, execution_id: ecdbafe5-ae63-4b9c-8577-6fe5c2215ad6-1709807454
+2024-03-07 14:00:55,050 [VDK] [INFO ] root                              execution_skip.py :111  _skip_job_if_nec - Local execution, skipping parallel execution check.
+2024-03-07 14:01:00,779 [VDK] [INFO ] vdk.internal.builtin_plugins.r   file_based_step.py :106  run_python_step  - Entering 01_model.py#run(...) ...
+Enter the number of PCA components, your number must be between zero and 4 : 4
+You entered: 4
+Tell me which methodology do you want to choose for your discrimination task?
+ Type 1 for Artificial Immune System
+ Type 2 for Decision Tree
+ Type 3 for Random Forests --> 2
+You have entered: 2
+Please input random state size: 400
+Entered random state size is :  400
+The accuracy is {accuracy_score(prev_y, test_y.values)}
+              precision    recall  f1-score   support
+
+      Setosa       1.00      1.00      1.00        16
+  Versicolor       0.89      1.00      0.94        16
+   Virginica       1.00      0.85      0.92        13
+
+    accuracy                           0.96        45
+   macro avg       0.96      0.95      0.95        45
+weighted avg       0.96      0.96      0.96        45
+```
+</details>
+
+![image](https://github.com/ehsan-farzadnia/ingest-from-csv-machnie-learning-example/assets/161824187/3b046620-2a64-4f54-b549-fe6e6ec37320)
+
+
