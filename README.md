@@ -332,7 +332,21 @@ def run(job_input: IJobInput) -> None:
 ```
 </details>
 
-Finally, place the directory containing files in the 'C:' directory on Windows. Navigate to the main directory and run the following command:
+Note: You can customize your SQLite query in your code to create complex queries however you want, by editing the 'run' function in the 'model.py' file. Below is the code for transforming tables, subject to customization:
+
+<details>
+    <summary>run</summary>
+
+``` run
+con = sqlite3.connect("beta.db")
+data = pd.read_sql_query("SELECT * from m1;", con)
+```
+
+</details>
+
+Possible queries that can be added to the above SQL script include, but are not limited to, 'joining tables,' 'Order by,' and 'making conditions using Where,' etc.
+
+Finally, place the directory containing files in the 'C:/' directory on Windows. Navigate to the main directory and run the following command:
 
 ``` console
 vdk run NSA
