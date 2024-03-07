@@ -332,4 +332,8 @@ def run(job_input: IJobInput) -> None:
 ```
 </details>
 
+Finally, go to the main directory and run the following command:
 
+``` console
+vdk run NSA
+```
