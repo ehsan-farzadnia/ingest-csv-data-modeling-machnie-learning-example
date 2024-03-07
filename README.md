@@ -37,7 +37,7 @@ Ingestion requires us to set environment variables for:
 
 * the type of database in which we will be ingesting;
 * the ingestion method;
-* the ingestion target - the location of the target database - if this file is not present, ingestion will create it in the current directory. For this example, we will use vdk-sqlite.db file which will be created in the current directory;
+* the ingestion target - the location of the target database - if this file is not present, ingestion will create it in the current directory. For this example, we will use beta.db file which will be created in the current directory;
 * the file of the default SQLite database against which VDK runs (same value as ingestion target in this case);
 
 Note: if you are using Windows, you need to use 'setx' instead of 'export'.
@@ -45,8 +45,8 @@ Note: if you are using Windows, you need to use 'setx' instead of 'export'.
 ```console
 export VDK_DB_DEFAULT_TYPE=SQLITE
 export VDK_INGEST_METHOD_DEFAULT=sqlite
-export VDK_INGEST_TARGET_DEFAULT=vdk-sqlite.db
-export VDK_SQLITE_FILE=vdk-sqlite.db
+export VDK_INGEST_TARGET_DEFAULT=beta.db
+export VDK_SQLITE_FILE=beta.db
 ```
 
 vdk ingest-csv
@@ -59,13 +59,13 @@ vdk ingest-csv --help
 
 Ingestion
 -
-If the .csv file to be ingested (iris.csv in our example), and the vdk-sqlite.db are present in the current directory, the only thing left is to run
+If the .csv file to be ingested (iris.csv in our example), and the beta.db are present in the current directory, the only thing left is to run
 
 ```console
 vdk ingest-csv -f iris.csv --table-name m1
 ```
 
-Otherwise, you first of all need to create an empty vdk-sqlite.db file in the main directory then start to run.  
+Otherwise, you first of all need to create an empty beta.db file in the main directory then start to run.  
 
 With this command, the CSV data will be ingested into the SQLite database. Upon successful ingestion, the logs should be similar to the ones below
 
@@ -332,8 +332,14 @@ def run(job_input: IJobInput) -> None:
 ```
 </details>
 
-Finally, go to the main directory and run the following command:
+Finally, place the directory containing files in the 'C:' directory on Windows. Navigate to the main directory and run the following command:
 
 ``` console
 vdk run NSA
+```
+
+Note: if you are using Linux, you should place the directory containing files in the '/home/ directory in addition to changing the line 23 of the script above as follows:
+
+```
+os.remove("/home/csv/beta.db")
 ```
