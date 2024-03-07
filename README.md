@@ -19,7 +19,7 @@ Scenario
 -
 The sample dataset contains flowers that vary in three categories (Setosa, Versicolor, Virginica). The objective of the study is to train a machine learning model to predict the correct label for each flower. Three machine learning techniques were applied in this study: the Negative Selection Algorithm (NSA), Decision Tree, and Random Forest. 
 
-CSF File
+CSV File
 -
 For the purpose of this example, we will be using a simple .csv file of the iris dataset, widely utilized by researchers in machine learning studies.
 
